@@ -1,5 +1,7 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,18 +25,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -42,185 +57,230 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Variable declerations */
-:root{
-    --white: hsl(0, 0%, 100%);
-    --stone-100: hsl(30, 54%, 90%);
-    --stone-150: hsl(30, 18%, 87%);
-    --stone-600: hsl(30, 10%, 34%);
-    --stone-900: hsl(24, 5%, 18%);
-    --brown: hsl(14, 45%, 36%);
-    --rose-800: hsl(332, 51%, 32%);
-    --rose-50: hsl(330, 100%, 98%);
-    --background: #F3E5D8;
-    --spacing-unit: 2rem;
-    --small-space: 1rem;
-    --border-radius: 1rem;
-    --outfit: "Outfit", sans-serif;
-    --young-serif: "Young Serif", serif;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  --background: #f3e5d8;
+  --spacing-unit: 2rem;
+  --small-space: 1rem;
+  --border-radius: 1rem;
+  --outfit: "Outfit", sans-serif;
+  --young-serif: "Young Serif", serif;
 }
 
 /** Global styles */
 
-h1, h2, h3, h4, h5, h6{
-    font-family: "Young Serif", serif;
-    font-weight: 400;
-    font-style: normal; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-p, li, table{
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--stone-600);
+p,
+li,
+table {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--stone-600);
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   padding-left: 0;
   margin-left: 0;
   list-style-position: inside;
-} 
+}
 
-li{
+li {
   margin-bottom: 1rem;
 }
 
-li:first-child{
+li:first-child {
   margin-top: 1rem;
 }
 
-li:last-child{
+li:last-child {
   margin-bottom: 0;
 }
 
-.section-title{
-    color: var(--brown);
-    font-size: 1.5rem;
+.section-title {
+  color: var(--brown);
+  font-size: 1.5rem;
 }
 
 /** Container */
-body{
-    background-color: var(--background);
-    padding: 4rem 0;
+body {
+  background-color: var(--background);
 }
-#container{
-    max-width: 980px;
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    margin: 0 auto;
-    padding: 1rem;
+#container {
+  max-width: 100%;
+  background-color: var(--white);
 }
 
-main{
-    width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--small-space);
+main {
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-space);
 }
 
 /** Header style */
 
-header{
-    width: 100%;
+header {
+  width: 100%;
 }
 
-header img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: var(--border-radius);
+header img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /** Section general design */
 
 /** Intro styling */
-#intro{
-    display: flex;
-    flex-direction: column;
-    gap: var(--small-space);
-    padding-top: var(--spacing-unit);
+#intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-space);
+  padding-top: var(--spacing-unit);
 }
 
-.page-title{
+.page-title {
   color: var(--stone-900);
 }
 
-.tagline{
-    font-size: 1rem;
-    color: var(--stone-600);
+.tagline {
+  font-size: 1rem;
+  color: var(--stone-600);
 }
 
 /** Preperation */
-#preperation{
-    background-color: var(--rose-50);
-    padding: var(--small-space);
-    border-radius: var(--border-radius);
+#preperation {
+  background-color: var(--rose-50);
+  padding: var(--small-space);
+  border-radius: var(--border-radius);
 }
 
-#preperation .section-title{
-    font-family: var(--outfit);
-    color:  var(--rose-800);
-    font-size: 1.2rem;
-    font-weight: 600;
+#preperation .section-title {
+  font-family: var(--outfit);
+  color: var(--rose-800);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-#prepertation li::marker{
-    color: var(--rose-50);
+#preperation li::marker {
+  color: var(--rose-800);
 }
 
 /** Ingredients styles */
 
-#ingredients, #instructions {
+#ingredients,
+#instructions {
   border-bottom: 1px solid var(--stone-150);
   padding-bottom: var(--spacing-unit);
 }
 
 /** Table styles */
 
-
-table{
+table {
   border-collapse: collapse;
   min-width: 100%;
   margin: 0 auto;
 }
-td, th{
+td,
+th {
   border-bottom: 1px solid var(--stone-150);
   padding: 0.5rem 1rem;
   text-align: start;
 }
 
-tr:last-of-type th, tr:last-of-type td{
-  border:none;
+tr:last-of-type th,
+tr:last-of-type td {
+  border: none;
 }
 
-th{
+th {
   font-weight: 400;
 }
-td{
+td {
   color: var(--brown);
   font-weight: 600;
 }
 /** Footer styles */
-footer{
+footer {
   padding-top: var(--spacing-unit);
   padding: 0 2rem;
   text-align: end;
 }
 
-@media (min-width: 645px;){
-    
+/** Media queries */
+@media (min-width: 645px) {
+  /** Container */
+  body {
+    background-color: var(--background);
+  }
+  #container {
+    max-width: 980px;
+    background-color: var(--white);
+    margin: 0 auto;
+  }
+
+  main {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-space);
+  }
+}
+
+@media (min-width: 980px){
+  body {
+    padding:2rem;
+  }
+  
+  #container {
+    border-radius: var(--border-radius);
+    padding: 1rem;
+  }
+  /** Header style */
+  header img {
+    border-radius: var(--border-radius);
+  }
 }
